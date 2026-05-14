@@ -1,0 +1,43 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: recipe_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: dishes_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Figtebe2005
+    ports:
+      - "5432:5432"
+    volumes:
+      - recipe_postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./demo
+      dockerfile: docker/Dockerfile
+    container_name: recipe_backend
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/dishes_db
+      DB_USERNAME: postgres
+      DB_PASSWORD: Figtebe2005
+      JWT_SECRET: c2VjcmV0LWtleS1mb3Itand0LXRva2Vucy1zaG91bGQtYmUtYXQtbGVhc3QtMzItYnl0ZXM=
+    ports:
+      - "8189:8189"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: recipe_frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+
+volumes:
+  recipe_postgres_data:
