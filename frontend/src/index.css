@@ -1,0 +1,279 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background:
+          radial-gradient(circle at 24px 24px, rgba(189, 128, 74, 0.08) 2px, transparent 2px) 0 0 / 58px 58px,
+          linear-gradient(180deg, #fbf5ec 0%, #f4eadc 100%);
+  color: #2f261f;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  font-family: inherit;
+  transition: all 0.18s ease;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(0.98);
+}
+
+input,
+select,
+textarea {
+  background-color: #fffdf9;
+  color: #2f261f;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: #b99572 !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #a86f3d !important;
+  box-shadow: 0 0 0 3px rgba(168, 111, 61, 0.12);
+}
+
+.topbar-auth-button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.side-nav-link:hover {
+  background-color: #f4eadc !important;
+  color: #2f261f !important;
+}
+
+.interactive-link:hover {
+  opacity: 0.86;
+}
+
+.primary-button:hover:not(:disabled),
+.app-primary-button:hover:not(:disabled) {
+  filter: brightness(1.04);
+}
+
+.app-surface {
+  background: rgba(255, 253, 249, 0.94);
+  border: 1px solid rgba(222, 199, 172, 0.75);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 10px 28px rgba(82, 55, 32, 0.08);
+  box-sizing: border-box;
+}
+
+.app-primary-button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background-color: #8f5f36;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.app-secondary-button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid #d9c2a7;
+  background-color: #fffdf9;
+  color: #3b2a1f;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.app-danger-button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background-color: #d93025;
+  color: #111;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.app-secondary-danger-button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid #b00020;
+  background-color: #fffdf9;
+  color: #b00020;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.app-filter-button {
+  height: 38px !important;
+  min-height: 38px !important;
+  padding: 0 16px !important;
+  border-radius: 10px !important;
+  border: 2px solid #d9c2a7 !important;
+  background-color: #fffdf9 !important;
+  color: #3b2a1f !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 38px !important;
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.app-filter-button:hover:not(:disabled) {
+  background-color: #fff7ec !important;
+  border-color: #b99572 !important;
+  filter: none !important;
+}
+
+.app-filter-button:disabled {
+  opacity: 0.45 !important;
+  cursor: not-allowed !important;
+}
+
+.app-filter-arrow-button {
+  width: 38px !important;
+  height: 38px !important;
+  min-height: 38px !important;
+  padding: 0 !important;
+  border-radius: 10px !important;
+  border: 2px solid #d9c2a7 !important;
+  background-color: #fffdf9 !important;
+  cursor: pointer !important;
+  font-size: 24px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+.app-filter-arrow-button:hover:not(:disabled) {
+  background-color: #fff7ec !important;
+  border-color: #b99572 !important;
+  filter: none !important;
+}
+
+.app-filter-arrow-button--active {
+  color: #8f5f36 !important;
+  border-color: #b99572 !important;
+  background-color: #fff7ec !important;
+}
+
+.app-filter-arrow-button--inactive {
+  color: #cbb9a5 !important;
+}
+
+.app-surface input,
+.app-surface select {
+  height: 38px !important;
+  min-height: 38px !important;
+  padding: 0 12px !important;
+  border: 2px solid #d9c2a7 !important;
+  border-radius: 10px !important;
+  background-color: #fffdf9 !important;
+  box-sizing: border-box !important;
+  font-size: 16px !important;
+}
+
+.app-profile-password-field {
+  position: relative;
+  width: 100%;
+}
+
+.app-profile-password-input {
+  width: 100%;
+  padding-right: 46px !important;
+}
+
+.app-profile-password-eye {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.app-surface textarea {
+  border: 2px solid #b68455 !important;
+  border-radius: 10px !important;
+  background-color: #fffdf9 !important;
+  box-sizing: border-box !important;
+  font-size: 16px !important;
+}
+
+.app-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.app-pagination-button {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid #d9c2a7;
+  background-color: #fffdf9;
+  color: #3b2a1f;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.app-pagination-button:hover:not(:disabled) {
+  background-color: #fff7ec;
+  border-color: #b99572;
+}
+
+.app-pagination-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.app-pagination-button--active {
+  background-color: #8f5f36;
+  border-color: #8f5f36;
+  color: #fff;
+}

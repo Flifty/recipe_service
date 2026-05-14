@@ -1,0 +1,43 @@
+# Java / Maven
+target/
+*.class
+
+# Node / React
+node_modules/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Logs
+*.log
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Archives
+*.zip
+*.rar
+*.7z
+
+# Temporary files
+*.tmp
+*.temp
+
+# Diploma documents
+*.pdf
+*.docx
+*.vsdx
+
+# Old / extra folders
+старое/
+Владислав/
